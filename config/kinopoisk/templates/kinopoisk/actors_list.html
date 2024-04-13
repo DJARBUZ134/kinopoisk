@@ -1,0 +1,20 @@
+{% extends "core/base.html"%}
+{% block title %}home{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% for person in persons %}
+    <a href="#">
+        <div class="card pg-3 mg-3" style="width: 18rem;">
+            <img src="{{person.photo.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{person.name}}</h5>
+                <!-- <p class="card-text">{{person.role}}</p> -->
+                <a href="#" class="btn btn-primary">Подробнее</a>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+
+</div>
+{% endblock %}

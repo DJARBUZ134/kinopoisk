@@ -1,0 +1,21 @@
+{% extends "core/base.html"%}
+{% block title %}home{% endblock %}
+
+{% block content %}
+ <div class="container" >
+    {% for movie in movies %}
+    <a href="#" > <div class="card pg-3 mg-3" style="width: 18rem;">
+            <img src="{{movie.poster.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{movie.title}}</h5>
+              <p class="card-text">{{movie.description}}</p>
+              <a href="#" class="btn btn-primary">Подробнее</a>
+            </div>
+          </div>
+        </a>
+    {% endfor %}
+
+ </div>
+{% endblock %}
+
+
